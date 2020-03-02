@@ -2,19 +2,19 @@
 
 Raising `a` to the power of `n` is expressed naively as multiplication by `a` done `n−1` times: `a^n=a⋅a⋅…⋅a`. However, this approach is not practical for large a or n.
 
-![large a](https://github.com/ishpreet-singh/icpc-2020/blob/master/Others/common/images/week-1/large-a.png)
+![large a](https://github.com/ishpreet-singh/icpc-2020/blob/master/images/week-1/large-a.png)
 
 The idea of binary exponentiation is, that we split the work using the binary representation of the exponent.
 
 Let's write n in base 2, for example:
 
-![example](https://github.com/ishpreet-singh/icpc-2020/blob/master/Others/common/images/week-1/ex1-part1.png)
+![example](https://github.com/ishpreet-singh/icpc-2020/blob/master/images/week-1/ex1-part1.png)
 
 Since the number n has exactly ⌊log2n⌋+1 digits in base 2, we only need to perform **`O(logn)`** multiplications, if we know the powers a,a^2,a^4,a^8,…,a^⌊logn⌋.
 
 So we only need to know a fast way to compute those. Luckily this is very easy, since an element in the sequence is just the square of the previous element.
 
-![example](https://github.com/ishpreet-singh/icpc-2020/blob/master/Others/common/images/week-1/ex1-part2.png)
+![example](https://github.com/ishpreet-singh/icpc-2020/blob/master/images/week-1/ex1-part2.png)
 
 So to get the final answer for 3^13, we only need to multiply three of them (skipping 32 because the corresponding bit in n is not set): 3^13=6561⋅81⋅3=1594323
 
@@ -22,7 +22,7 @@ The final complexity of this algorithm is **`O(logn)`**: we have to compute logn
 
 The following recursive approach expresses the same idea:
 
-![Recursive Binary](https://github.com/ishpreet-singh/icpc-2020/blob/master/Others/common/images/week-1/recusive-binary.png)
+![Recursive Binary](https://github.com/ishpreet-singh/icpc-2020/blob/master/images/week-1/recusive-binary.png)
 
 Recursive approach
 ```
