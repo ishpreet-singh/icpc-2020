@@ -74,3 +74,8 @@ long long binpow(long long a, long long b, long long m) {
     return res;
 }
 ```
+
+## Practice Question
+
+* https://www.codechef.com/problems/FLOW016
+* https://www.spoj.com/problems/LCPCP2/
