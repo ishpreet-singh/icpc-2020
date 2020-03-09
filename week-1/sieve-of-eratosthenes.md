@@ -1,4 +1,4 @@
-
+# Sieve of Eratosthenes
 
 Sieve of Eratosthenes is an algorithm for finding all the prime numbers in a segment [1;n] using O(nloglogn) operations.
 
